@@ -1,3 +1,7 @@
+output "machine_learning_datastore_blobstorages_id" {
+  description = "Map of id values across all machine_learning_datastore_blobstorages, keyed the same as var.machine_learning_datastore_blobstorages"
+  value       = { for k, v in azurerm_machine_learning_datastore_blobstorage.machine_learning_datastore_blobstorages : k => v.id }
+}
 output "machine_learning_datastore_blobstorages_account_key" {
   description = "Map of account_key values across all machine_learning_datastore_blobstorages, keyed the same as var.machine_learning_datastore_blobstorages"
   value       = { for k, v in azurerm_machine_learning_datastore_blobstorage.machine_learning_datastore_blobstorages : k => v.account_key }
